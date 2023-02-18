@@ -1,24 +1,31 @@
-#include <iostream>
-#include <stdlib>
-#include <time>
+#include <stdlib.h>
+#include <time.h>
+#include <stdio.h>
 
-/* main - entry point
-* return - 0 (Success)
-*/
+/**
+ *main - Entry point
+ *Return: Always 0 (Success)
+ */
 
 int main(void)
 {
-    std::srand(std::time(nullptr));
-    int n = std::rand() % RAND_MAX;
+	int n;
 
-    std::cout << n << " ";
-    if (n > 0) {
-        std::cout << "is positive" << std::endl;
-    } else if (n == 0) {
-        std::cout << "is zero" << std::endl;
-    } else {
-        std::cout << "is negative" << std::endl;
-    }
+	srand(time(0));
+	n = rand() - RAND_MAX / 2;
 
-    return (0);
+	if (n > 0)
+	{
+		printf("%d is positive\n", n);
+	}
+	else if (n == 0)
+	{
+		printf("%d is zero\n", n);
+	}
+	else if (n < 0)
+	{
+		printf("%d is negative\n", n);
+	}
+
+	return (0);
 }
