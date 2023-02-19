@@ -1,8 +1,11 @@
 #include <stdio.h>
 
 /**
- * main - print alphabet in lower case, followed by a newline
- * return: 0 (Success)
+ * main - Entry point
+ *
+ * Description: print alphabet in lower case, followed by a newline
+ *
+ * Return: Always 0 (Success)
  */
 
 int main(void)
@@ -16,5 +19,6 @@ int main(void)
 	}
 
 	putchar('\n');
+
 	return (0);
 }
