@@ -1,14 +1,15 @@
 #include <stdio.h>
 
-/*
- * main- Entry point
+/**
+ *main - Entry point
  *
- * Declaration: print all the numbers of base 16 in lowercase
+ *Description: print all the numbers of base 16 in lowercase
  *
- * return: Always 0 (Success)
+ *Return: Always 0 (Success)
  */
 
 int main(void)
+
 {
 	int i;
 
