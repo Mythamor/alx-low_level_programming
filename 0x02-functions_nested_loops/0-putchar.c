@@ -1,7 +1,7 @@
-#include "_putchar.h"
+#include "main.h"
 
 /**
- *main - Entry point
+ *main - check the code
  *Description: Write a program that prints _putchar, followed by a new line
  *Return: Always 0 (Success)
  */
