@@ -19,7 +19,7 @@ int main(void)
 
 	if (count < 50)
 {
-	printf(", ")
+	printf(", ");
 }
 	num1 = num2;
 	num2 = nextNum;
