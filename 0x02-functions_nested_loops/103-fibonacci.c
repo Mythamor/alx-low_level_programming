@@ -5,29 +5,20 @@
  * Return: Always(0) Success
  */
 
-
 int main(void)
 {
-	long int num1 = 1, num2 = 2, nextNum, count;
+	int num1 = 1, num2 = 2, nextNum, sum = 2;
 
-	printf("%ld, %ld, ", num1, num2);
-
-	for (count = 3; count <= 50; count++)
+	while (num1 + num2 <= 4000000)
 {
 	nextNum = num1 + num2;
-	if (nextNum < 4000000 || nextNum % 2 == 0)
+		if (nextNum % 2 == 0)
 {
-	printf("%ld", nextNum);
-
-	if (count < 32)
-{
-	printf(", ");
+			sum += nextNum;
 }
 	num1 = num2;
 	num2 = nextNum;
 }
-}
-	printf("\n");
-
+	printf("%d\n", sum);
 	return (0);
 }
