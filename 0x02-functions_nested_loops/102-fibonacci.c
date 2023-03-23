@@ -15,7 +15,12 @@ int main(void)
 	for (count = 3; count <= 50; count++)
 {
 	nextNum = num1 + num2;
-	printf("%ld, ", nextNum);
+	printf("%ld", nextNum);
+
+	if (count < 50)
+{
+	printf(", ")
+}
 	num1 = num2;
 	num2 = nextNum;
 }
