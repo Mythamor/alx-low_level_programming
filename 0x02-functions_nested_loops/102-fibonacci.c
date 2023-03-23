@@ -8,14 +8,14 @@
 
 int main(void)
 {
-	long long int num1 = 1, num2 = 2, nextNum, count;
+	long int num1 = 1, num2 = 2, nextNum, count;
 
-	printf("%lld, %lld, ", num1, num2);
+	printf("%ld, %ld, ", num1, num2);
 
 	for (count = 3; count <= 50; count++)
 {
 	nextNum = num1 + num2;
-	printf("%lld, ", nextNum);
+	printf("%ld, ", nextNum);
 	num1 = num2;
 	num2 = nextNum;
 }
