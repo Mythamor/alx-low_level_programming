@@ -10,12 +10,12 @@ int main(void)
 {
 	long long int num1 = 1, num2 = 2, nextNum, count;
 
-	printf("%d, %d, ", num1, num2);
+	printf("%lld, %lld, ", num1, num2);
 
 	for (count = 3; count <= 50; count++)
 {
 	nextNum = num1 + num2;
-	printf("%d, ", nextNum);
+	printf("%lld, ", nextNum);
 	num1 = num2;
 	num2 = nextNum;
 }
