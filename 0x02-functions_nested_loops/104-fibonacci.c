@@ -9,12 +9,12 @@ int main(void)
 {
 	double num1 = 1, num2 = 2, nextNum, count;
 
-	printf("%.0lf, %.0lf, ", num1, num2);
+	printf("%.0f, %.0f, ", num1, num2);
 
 	for (count = 3; count <= 98; count++)
 {
 	nextNum = num1 + num2;
-	printf("%.0lf", nextNum);
+	printf("%.0f", nextNum);
 
 	if (count < 98)
 {
