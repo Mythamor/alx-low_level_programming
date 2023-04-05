@@ -1,4 +1,5 @@
 #include "lists.h"
+#include <stddef.h>
 
 /**
  * get_nodeint_at_index - returns nth node of a linked list
