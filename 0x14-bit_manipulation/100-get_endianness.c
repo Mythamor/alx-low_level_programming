@@ -12,7 +12,7 @@ int i = 1;
 
 char *n = (char *)&i;
 
-if (*p == 1)
+if (*n == 1)
 {
 return (1);
 }
