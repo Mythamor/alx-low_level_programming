@@ -1,16 +1,18 @@
-#!/usr/bin/python3
+def check_pali(pali):
+    return (pali[::-1] == pali)
 
-def isPalindrome(mul):
-    return(str(mul) == str(mul)[::-1])
 
-def find_biggest_palindrome():
-    biggestPal = 0
-    for i in range(999, 100, -1):
-        for j in range (999, 100, -1):
-            mul = i * j
-            if (isPalindrome(mul)):
-                if mul > biggestPal:
-                    biggestPal = mul
-    return(biggestPal)
-
-print(find_biggest_palindrome())
+def highest_pali():
+    for i in range(998001, 10000, -1):
+        if check_pali(str(i)) == False:
+            continue
+        for j in range(999, 99, -1):
+            module = i % j
+            if (int(i / j) > 999 or int(i / j) < 100):
+                continue
+            if (module != 0):
+                continue
+            print(i)
+            return
+    print("never")
+highest_pali()
