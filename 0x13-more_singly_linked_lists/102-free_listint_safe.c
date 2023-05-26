@@ -3,15 +3,15 @@
 #include <stdlib.h>
 
 /**
- * _free_listint_safe -  free lists with a loop
- * @head- double pointer to the first node of the list
- * Return:the size of the list that was free’d
+ * free_listint_safe -  free lists with a loop
+ * @h: double pointer to the first node of the list
+ * Return: the size of the list that was free’d
  */
 
-size_t _free_listint_safe(listint_t **head)
+size_t free_listint_safe(listint_t **h)
 {
 	size_t count = 0;
-	listint_t *current = *head;
+	listint_t *current = *h;
 	listint_t *next;
 
 	while (current != NULL)
@@ -21,11 +21,11 @@ size_t _free_listint_safe(listint_t **head)
 		count++;
 
 		if (next <= current)
-		break;
+			break;
 
 		current = next;
 }
 
-	*head = NULL;
+	*h = NULL;
 	return (count);
 }
