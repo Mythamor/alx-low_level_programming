@@ -1,48 +1,26 @@
-# Variables
+# Usage: make [all/clean/oclean/fclean] -f [file]
+
 CC = gcc
 SRC = main.c school.c
 OBJ = $(SRC:.c=.o)
 NAME = school
 CFLAGS = -Wall -Werror -Wextra -pedantic
 
-# Rule to say rules below are not file names
-.PHONY: all clean oclean fclean re
-
-# 'all' - build executables
-all: $(NAME)
-
-# Rule for linking the object files to create the executable
-$(NAME): m.h $(OBJ)
+#all - build executables
+all: m.h $(OBJ)
         $(CC) $(OBJ) -o $(NAME)
 
-# Rule for compiling the source files into object files
-%.o: %.c
-        $(CC) $(CFLAGS) -c $< -o $@
 
-# 'clean' - deletes temporary files & executables
+#clean - deletes tmp files & executables
 clean:
-        -$(RM) *~ $(NAME)
+        $(RM) *~ $(NAME)
 
-# 'oclean' - deletes object files
+#oclean - deletes object files
 oclean:
-        -$(RM) $(OBJ)
+        $(RM) $(OBJ)
 
-# 'fclean' - deletes temporary files, executables, and object files
+#fclean - deletes all tmp, exe., and obj. files
 fclean: clean oclean
 
-# 're' - forces recompilation of all source files
+#re - forces recompilation of all source files
 re: fclean all
-
-# 'm.h' should be a prerequisite for all
-$(OBJ): m.h
-
-# Ensure that 'm.h' exists before building
-$(NAME): m.h
-
-# Suppress errors if 'm.h' is missing
-m.h:
-
-# Disable built-in implicit rules
-.SUFFIXES:
-
-
