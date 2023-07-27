@@ -22,5 +22,5 @@ oclean:
 fclean: clean oclean
 
 #re - forces recompilation of all source files
-re: oclean all
+re: fclean all
 
